@@ -10,7 +10,7 @@ export default class DiscoverNewThings extends Component {
                     <View style= {{flex: 1}} >
                     <Image 
                     style={{flex: 1,height:null,width:null, resizeMode:'cover'}}
-                    source={require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
+                    source={require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                     />
                     </View>
                     <View style= {{flex: 1, alignItems: 'flex-start', paddingLeft: 10, justifyContent: 'space-evenly'}}>

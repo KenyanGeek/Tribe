@@ -26,7 +26,7 @@ export default function Add ({navigation}) {
                       <View style={{width:40,height:200,marginTop:20}}>
                         <Image 
                         style={{flex: 1,height:200,width:330, resizeMode:'cover',borderRadius: 5, borderWidth: 1, borderColor:'#dddddd' }}
-                        source={require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/8.png')}
+                        source={require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/8.png')}
                         />
 
                       </View>

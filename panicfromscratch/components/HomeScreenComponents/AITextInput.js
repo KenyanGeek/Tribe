@@ -82,7 +82,7 @@ export default class AITextInput extends Component {
       style={styles.scrollView} >
         <View style={{marginTop:10, paddingBottom: 10, backgroundColor: 'white'}}>
         <Text style={{marginTop:10, fontSize: 48, fontWeight: '700', paddingHorizontal: 20}}>
-                        Tribes 
+                        Tribe 
                           </Text>
         </View> 
 
@@ -96,17 +96,17 @@ export default class AITextInput extends Component {
           
                       <ScrollView horizontal={true}
                       showsHorizontalScrollIndicator={false}>
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='StarGazing Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                         name='Science Fiction Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Polo Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='Bird Watching Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                         name='Mediation Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Whisky Tribe' />
                       </ScrollView>
           </View> 
@@ -120,17 +120,17 @@ export default class AITextInput extends Component {
           
                       <ScrollView horizontal={true}
                       showsHorizontalScrollIndicator={false}>
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='StarGazing Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                         name='Science Fiction Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Polo Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='Bird Watching Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                         name='Mediation Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Whisky Tribe' />
                       </ScrollView>
           </View> 
@@ -144,17 +144,15 @@ export default class AITextInput extends Component {
           
                       <ScrollView horizontal={true}
                       showsHorizontalScrollIndicator={false}>
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='StarGazing Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
-                        name='Science Fiction Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                        
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Polo Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/4.jpg')}
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
                         name='Bird Watching Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/3.png')}
-                        name='Mediation Tribe' />
-                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/2020 react apps/Panic-Button/panicfromscratch/assets/experiences.jpg')}
+                       
+                        <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}
                         name='Whisky Tribe' />
                       </ScrollView>
           </View> 
