@@ -97,7 +97,7 @@ export default class AITextInput extends Component {
                       <ScrollView horizontal={true}
                       showsHorizontalScrollIndicator={false}>
                         <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/4.jpg')}
-                        name='StarGazing Tribe' />
+                        name='StarGazing Tribe' screenName="Details"/>
                         <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/3.png')}
                         name='Science Fiction Tribe' />
                         <ThingsToDo imageUri = {require('/Users/chege/Desktop/Tribe/panicfromscratch/assets/experiences.jpg')}

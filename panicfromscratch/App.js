@@ -22,9 +22,11 @@ const Tab = createBottomTabNavigator();
 
 
 
-    function Details() {
+
+    function FirstOnStack() {
       return (
         <Stack.Navigator>
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="Details" component={CommonDetailsComponent} />
         </Stack.Navigator>
       );
@@ -62,53 +64,14 @@ const Tab = createBottomTabNavigator();
             }}
             
     >
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home" component={FirstOnStack} />
         <Tab.Screen name="Add" component={Add} />
         <Tab.Screen name="Profile" component={Profile} />
-        <Tab.Screen name="Details" component={CommonDetailsComponent} />
+        
 </Tab.Navigator>
   </NavigationContainer>
       );
     }
-//     <NavigationContainer>
-//       <Drawer.Navigator>
-//         <Drawer.Screen name="Details" component={CommonDetailsComponent} />
-//       </Drawer.Navigator>
-      
-//     <Tab.Navigator
-//             screenOptions={({ route }) => ({
-//               tabBarIcon: ({ focused, color, size }) => {
-//                 let iconName;
-
-//                 if (route.name === 'Home') {
-//                   iconName = focused
-//                     ? 'ios-home'
-//                     : 'ios-home';
-//                 } else if (route.name === 'Mood') {
-//                   iconName = focused ? 'ios-happy' : 'ios-happy';
-//                 } else if (route.name === 'Add') {
-//                   iconName = focused ? 'ios-add-circle' : 'ios-add-circle';
-//                 } else if (route.name === 'Profile') {
-//                   iconName = focused ? 'md-person' : 'md-person';
-//                 }
-
-//                 // You can return any component that you like here!
-//                 return <Ionicons name={iconName} size={size} color={color} />;
-//               },
-//             })}
-//             tabBarOptions={{
-//               activeTintColor: 'tomato',
-//               inactiveTintColor: 'gray',
-//             }}
-            
-//     >
-//         <Tab.Screen name="Home" component={HomeScreen} />
-//         <Tab.Screen name="Add" component={Add} />
-//         <Tab.Screen name="Profile" component={Profile} />
-//         <Tab.Screen name="Details" component={CommonDetailsComponent} />
-// </Tab.Navigator>
-//   </NavigationContainer>
-
 
 export default App;
 
