@@ -18,26 +18,6 @@ const {height,width} = Dimensions.get('window')
 
 export default class AITextInput extends Component {
 
-//   constructor(props){
-//     super(props)
-//     this.state = {text:'I want to go to the AI model'}
-
-//   }
-
-
-// onChangeText =(text) => {
-//   this.setState({text})
-// }
-
-
-//     componentWillMount(){
-//       this.scrollY = new Animated.Value(0)
-//       this.startHeaderHeight = 80
-//       if(Platform.OS=='android'){
-//         this.startHeaderHeight = 100 + StatusBar.currentHeight
-//       }
-//     }
-  
   render() {
 
 
@@ -137,37 +117,13 @@ export default class AITextInput extends Component {
                       Trending Tribes 
                       </Text>
                           <View style= {{paddingHorizontal:20, marginTop: 20, flexDirection:'row',flexWrap:'wrap', justifyContent:'space-between'}} >
-                            <DiscoverNewThings width={width}
-                              name='Yoga with Miriam'
-                              type='Eastern Healing'
-                              price={82}
-                              rating={5}
-
-                            />
-                            <DiscoverNewThings width={width}
-                            name='Astrology with Ben Pol'
-                            type='Metaphysics'
-                            price={20}
-                            rating={1}
-                            />
-                            <DiscoverNewThings width={width}
-                            name='Burlington Tour with Ann'
-                            type='Bonding Tour'
-                            price={45}
-                            rating={4}
-                            />
-                          <DiscoverNewThings width={width}
-                            name='Meditation with the Meditation Medusa'
-                            type='Eastern Meditation'
-                            price={15}
-                            rating={5}
-                            />
-                          </View>
-                             
-          </View>  
-                  
-          
-          
+                            
+                            <ScrollView horizontal={true}
+                      showsHorizontalScrollIndicator={false}>
+                        <DiscoverNewThings />
+                      </ScrollView>
+                          </View>                          
+          </View>      
       </ScrollView>
       </SafeAreaView>     
      )}};
