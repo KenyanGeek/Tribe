@@ -57,7 +57,8 @@ return (
   <FlatList
    data={items}
    keyExtractor ={(items, index) => index.toString()}
-   renderItem = {this._renderItem}/>
+   renderItem = {this._renderItem}
+   horizontal={true} />
 )
 
   }
