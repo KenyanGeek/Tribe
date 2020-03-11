@@ -18,7 +18,7 @@ export default class ThingsToDo extends PureComponent {
   }
 
   getDataFromApi = async () => {
-    const endpoint = 'https://jsonplaceholder.typicode.com/photos?_limit=20'
+    const endpoint = 'https://jsonplaceholder.typicode.com/photos'
     const res = await fetch(endpoint)
     const data = await res.json()
     this.setState({items: data})

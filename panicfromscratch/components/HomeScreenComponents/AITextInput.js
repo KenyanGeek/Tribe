@@ -124,8 +124,7 @@ export default class AITextInput extends Component {
           
                       <ScrollView horizontal={true}
                       showsHorizontalScrollIndicator={false}>
-                                                <ThingsToDo />
-
+                        <ThingsToDo />
                       </ScrollView>
           </View> 
             
