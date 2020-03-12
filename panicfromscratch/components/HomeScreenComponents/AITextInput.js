@@ -7,7 +7,7 @@ import StarRating from 'react-native-star-rating'
 
 
 
-import ThingsToDo from './ThingsToDo'
+import TribesComponent from './Tribes/TribesComponent'
 import DiscoverNewThings from './DiscoverNewThings'
 import Tag from './Tag'
 import MyVideo from './MyVideo'
@@ -74,11 +74,9 @@ export default class AITextInput extends Component {
                         Interact with your inner Circle - have notifications
                       </Text>
           
-                      <ScrollView horizontal={true}
-                      showsHorizontalScrollIndicator={false}>
-                        <ThingsToDo />
+                      
+                        <TribesComponent />
                         
-                      </ScrollView>
           </View> 
           <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
                       <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
@@ -88,11 +86,10 @@ export default class AITextInput extends Component {
                         Meet your People
                       </Text>
           
-                      <ScrollView horizontal={true}
-                      showsHorizontalScrollIndicator={false}>
-                                                <ThingsToDo />
+                  
+                            <TribesComponent />
 
-                      </ScrollView>
+                      
           </View> 
           <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
                       <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
@@ -102,10 +99,8 @@ export default class AITextInput extends Component {
                         Meet your People - Use AI model for recommendation
                       </Text>
           
-                      <ScrollView horizontal={true}
-                      showsHorizontalScrollIndicator={false}>
-                        <ThingsToDo />
-                      </ScrollView>
+                      <TribesComponent />
+
           </View> 
             
                 

@@ -3,7 +3,7 @@ import { Text, View, ScrollView, Image, StyleSheet } from 'react-native'
 
 import DetailsImageComponent from './DetailsImageComponent'
 import MyVideo from '../HomeScreenComponents/MyVideo'
-import ThingsToDo from '../HomeScreenComponents/ThingsToDo'
+import ThingsToDo from '../HomeScreenComponents/Tribes/TribesComponent'
 
 
 export default class CommonDetailsComponent extends Component {
