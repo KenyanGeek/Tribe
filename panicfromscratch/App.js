@@ -13,7 +13,7 @@ import { Ionicons } from '@expo/vector-icons/';
 import HomeScreen from './screens/BottomTab/HomeScreen';
 import Add from './screens/BottomTab/Add';
 import Profile from './screens/BottomTab/Profile';
-import CommonDetailsComponent from './components/DetailsComponent/CommonDetailsComponent'
+import TribesActivity from './components/DetailsComponent/TribeActivity'
 
 
 
