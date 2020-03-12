@@ -22,7 +22,7 @@ export default class TribesComponent extends React.Component {
   onPressCategory = item => {
     const title = item.name;
     const category = item;
-    this.props.navigation.navigate('RecipesList', { category, title });
+    this.props.navigation.navigate('TribesActivity', { category, title });
   };
 
   renderCategory = ({ item }) => (

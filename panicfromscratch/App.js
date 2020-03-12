@@ -27,7 +27,7 @@ const Tab = createBottomTabNavigator();
       return (
         <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="Details" component={CommonDetailsComponent} />
+          <Stack.Screen name="TribesActivity" component={TribesActivity} />
         </Stack.Navigator>
       );
     }
