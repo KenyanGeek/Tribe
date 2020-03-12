@@ -22,13 +22,12 @@ export default class TribesComponent extends React.Component {
   onPressCategory = item => {
     const title = item.name;
     const category = item;
-    this.props.navigation.navigate('TribesActivity', { category, title });
+    this.props.navigation.navigate('TribeActivity', { category, title });
   };
-
   renderCategory = ({ item }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressCategory(item)}>
       <View style={styles.categoriesItemContainer}>
-        <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} />
+        <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} /> 
         <Text style={styles.categoriesName}>{item.name} Tribe </Text>
         <Text style={styles.categoriesInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
       </View>
