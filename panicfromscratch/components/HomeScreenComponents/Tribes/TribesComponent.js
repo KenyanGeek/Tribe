@@ -9,11 +9,15 @@ import {
 import styles from './styles';
 import { categories } from '../../data/dataArrays';
 import { getNumberOfRecipes } from '../../data/MockDataAPI';
+import { NavigationContext } from '@react-navigation/native';
+
+
 
 export default class TribesComponent extends React.Component {
   static navigationOptions = {
     title: 'Categories'
   };
+  static contextType = NavigationContext;
 
   constructor(props) {
     super(props);
@@ -22,7 +26,7 @@ export default class TribesComponent extends React.Component {
   onPressCategory = item => {
     const title = item.name;
     const category = item;
-    this.props.navigation.navigate('TribeActivity', { category, title });
+    navigation.navigate('TribeActivity', { category, title });
   };
   renderCategory = ({ item }) => (
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressCategory(item)}>

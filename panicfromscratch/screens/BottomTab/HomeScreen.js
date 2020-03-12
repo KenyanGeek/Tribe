@@ -15,34 +15,6 @@ export default class HomeScreen extends Component {
 
   return (
     <SafeAreaView style={{flex:1}}>
-              
-      {/* <View style={{height:140,paddingTop: 30,backgroundColor:'white',borderBottomWidth:3,borderBottomColor:'#dddddd'}}>
-            <View style={{flexDirection:'row', padding: 10, backgroundColor: 'white',marginHorizontal: 20,
-                          shadowOffset:{width:0, height:0}, 
-                          shadowColor: 'black',
-                          shadowOpacity: 0.2, elevation: 1}}>
-                    <Icon name="smileo" size={20} color="#dddddd" />
-                    <TextInput
-                          underlineColorAndroid="transparent"
-                          placeholder= "     How do you feel today?"
-                          placeholderTextColor = "grey"
-                          onChangeText={this.onChangeText}
-                          style={{flex:1,fontWeight:'700',backgroundColor: 'white'}}
-                          multiline={true}
-                          maxLength={40}
-                          />
-                    
-            </View>
-            <Animated.View style={{flexDirection:'row', marginHorizontal: 20, position: 'relative', top: 10}}>
-                  <Tag name='New'/>
-                  <Tag name='Connections'/>
-                  <Tag name='Moods'/> 
-                  <Tag name='Professional Help'/>
-                  <Tag name='Panic Button'/>
-
-
-            </Animated.View>
-      </View> */}
 
       <ScrollView  scrollEventThrottle ={16}  
       onScroll={Animated.event(
