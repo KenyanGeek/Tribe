@@ -3,6 +3,7 @@ import { Animated, StyleSheet, Text, SafeAreaView, ScrollView} from 'react-nativ
 import { View } from 'native-base';
 
 import TribesComponent from '../../components/HomeScreenComponents/Tribes/TribesComponent'
+import RecommendedTribesComponent from '../../components/HomeScreenComponents/Tribes/RecommendedTribesComponent'
 import DiscoverNewThings from '../../components/HomeScreenComponents/DiscoverNewThings'
 
 
@@ -16,14 +17,7 @@ export default class HomeScreen extends Component {
   return (
     <SafeAreaView style={{flex:1}}>
 
-      <ScrollView  scrollEventThrottle ={16}  
-      onScroll={Animated.event(
-        [
-          {nativeEvent:{contentOffset:{y:this.scrollY}}
-        }
-        ]
-      )}
-      style={styles.scrollView} >
+      <ScrollView  style={styles.scrollView} >
         <View style={{marginTop:10, paddingBottom: 10, backgroundColor: 'white'}}>
         <Text style={{marginTop:10, fontSize: 48, fontWeight: '700', paddingHorizontal: 20}}>
                         Tribe 
@@ -63,7 +57,7 @@ export default class HomeScreen extends Component {
                         Meet your People - Use AI model for recommendation
                       </Text>
           
-                      <TribesComponent />
+                      <RecommendedTribesComponent />
 
           </View> 
             
