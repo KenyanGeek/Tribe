@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 import React, { Component } from 'react';
-import { recipes, tribes, ingredients } from './dataArrays';
+import { activitys, tribes, ingredients } from './dataArrays';
 
 export function getTribeById(tribeId) {
   let tribe;
@@ -42,32 +42,32 @@ export function getTribeName(tribeId) {
   return name;
 }
 
-export function getRecipes(tribeId) {
-  const recipesArray = [];
-  recipes.map(data => {
+export function getActivitys(tribeId) {
+  const activitysArray = [];
+  activitys.map(data => {
     if (data.tribeId == tribeId) {
-      recipesArray.push(data);
+      activitysArray.push(data);
     }
   });
-  return recipesArray;
+  return activitysArray;
 }
 
 // modifica
-export function getRecipesByIngredient(ingredientId) {
-  const recipesArray = [];
-  recipes.map(data => {
+export function getActivitysByIngredient(ingredientId) {
+  const activitysArray = [];
+  activitys.map(data => {
     data.ingredients.map(index => {
       if (index[0] == ingredientId) {
-        recipesArray.push(data);
+        activitysArray.push(data);
       }
     });
   });
-  return recipesArray;
+  return activitysArray;
 }
 
 export function getNumberOfActivities(tribeId) {
   let count = 0;
-  recipes.map(data => {
+  activitys.map(data => {
     if (data.tribeId == tribeId) {
       count++;
     }
@@ -88,44 +88,44 @@ export function getAllIngredients(idArray) {
 }
 
 // functions for search
-export function getRecipesByIngredientName(ingredientName) {
+export function getActivitysByIngredientName(ingredientName) {
   const nameUpper = ingredientName.toUpperCase();
-  const recipesArray = [];
+  const activitysArray = [];
   ingredients.map(data => {
     if (data.name.toUpperCase().includes(nameUpper)) {
       // data.name.yoUpperCase() == nameUpper
-      const recipes = getRecipesByIngredient(data.ingredientId);
-      const unique = [...new Set(recipes)];
+      const activitys = getActivitysByIngredient(data.ingredientId);
+      const unique = [...new Set(activitys)];
       unique.map(item => {
-        recipesArray.push(item);
+        activitysArray.push(item);
       });
     }
   });
-  const uniqueArray = [...new Set(recipesArray)];
+  const uniqueArray = [...new Set(activitysArray)];
   return uniqueArray;
 }
 
-export function getRecipesBytribeName(tribeName) {
+export function getActivitysBytribeName(tribeName) {
   const nameUpper = tribeName.toUpperCase();
-  const recipesArray = [];
+  const activitysArray = [];
   tribes.map(data => {
     if (data.name.toUpperCase().includes(nameUpper)) {
-      const recipes = getRecipes(data.id); // return a vector of recipes
-      recipes.map(item => {
-        recipesArray.push(item);
+      const activitys = getActivitys(data.id); // return a vector of activitys
+      activitys.map(item => {
+        activitysArray.push(item);
       });
     }
   });
-  return recipesArray;
+  return activitysArray;
 }
 
-export function getRecipesByRecipeName(recipeName) {
-  const nameUpper = recipeName.toUpperCase();
-  const recipesArray = [];
-  recipes.map(data => {
+export function getActivitysByActivityName(activityName) {
+  const nameUpper = activityName.toUpperCase();
+  const activitysArray = [];
+  activitys.map(data => {
     if (data.title.toUpperCase().includes(nameUpper)) {
-      recipesArray.push(data);
+      activitysArray.push(data);
     }
   });
-  return recipesArray;
+  return activitysArray;
 }

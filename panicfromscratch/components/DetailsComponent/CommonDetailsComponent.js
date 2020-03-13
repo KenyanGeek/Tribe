@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView, Image, StyleSheet } from 'react-native'
 
-import DetailsImageComponent from './DetailsImageComponent'
+import DetailsImageComponent from './TribesActivity'
 import MyVideo from '../HomeScreenComponents/MyVideo'
 import ThingsToDo from '../HomeScreenComponents/Tribes/TribesComponent'
 
