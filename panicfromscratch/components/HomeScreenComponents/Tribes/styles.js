@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  categoriesItemContainer: {
+  tribeItemContainer: {
     flex: 1,
     marginLeft: 20,
     justifyContent: 'center',
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
 
   },
-  categoriesPhoto: {
+  tribePhoto: {
     flex: 3,
     width: '100%',
     height: 155,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1.0,
     elevation: 3
   },
-  categoriesName: {
+  tribeName: {
     flex: 1,
     fontSize: 20,
     fontWeight: 'bold',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginTop: 8
   },
-  categoriesInfo: {
+  tribeInfo: {
     flex: 1,
     marginTop: 3,
     marginBottom: 5

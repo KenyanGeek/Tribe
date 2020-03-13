@@ -7,29 +7,29 @@ import {
   TouchableHighlight
 } from 'react-native';
 import styles from './styles';
-import { categories } from '../../data/dataArrays';
+import { tribes } from '../../data/dataArrays';
 import { getNumberOfRecipes } from '../../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
 
 
 
 
-export default function HomeScreen() {
+export default function TribesComponent() {
 
   const navigation = useNavigation();
 
-  onPressCategory = item => {
+  onPressTribe = item => {
     const title = item.name;
-    const category = item;
-    navigation.navigate("Add", { category, title });
+    const tribe = item;
+    navigation.navigate("Add", { tribe, title });
   };
   
-  renderCategory = ({ item }) => (
-        <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressCategory(item)}>
-          <View style={styles.categoriesItemContainer}>
-            <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} /> 
-            <Text style={styles.categoriesName}>{item.name} Tribe </Text>
-            <Text style={styles.categoriesInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
+  renderTribe = ({ item }) => (
+        <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressTribe(item)}>
+          <View style={styles.tribeItemContainer}>
+            <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
+            <Text style={styles.tribeName}>{item.name} Tribe </Text>
+            <Text style={styles.tribeInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
           </View>
         </TouchableHighlight>
       );
@@ -38,8 +38,8 @@ export default function HomeScreen() {
   return (
     <View>
         <FlatList
-          data={categories}
-          renderItem={this.renderCategory}
+          data={tribes}
+          renderItem={this.renderTribe}
           keyExtractor={item => `${item.id}`}
           horizontal={true}
         />

@@ -1,15 +1,15 @@
 import { Text } from 'react-native';
 import React, { Component } from 'react';
-import { recipes, categories, ingredients } from './dataArrays';
+import { recipes, tribes, ingredients } from './dataArrays';
 
-export function getCategoryById(categoryId) {
-  let category;
-  categories.map(data => {
-    if (data.id == categoryId) {
-      category = data;
+export function getTribeById(tribeId) {
+  let tribe;
+  tribes.map(data => {
+    if (data.id == tribeId) {
+      tribe = data;
     }
   });
-  return category;
+  return tribe;
 }
 
 export function getIngredientName(ingredientID) {
@@ -32,20 +32,20 @@ export function getIngredientUrl(ingredientID) {
   return url;
 }
 
-export function getCategoryName(categoryId) {
+export function gettribeName(tribeId) {
   let name;
-  categories.map(data => {
-    if (data.id == categoryId) {
+  tribes.map(data => {
+    if (data.id == tribeId) {
       name = data.name;
     }
   });
   return name;
 }
 
-export function getRecipes(categoryId) {
+export function getRecipes(tribeId) {
   const recipesArray = [];
   recipes.map(data => {
-    if (data.categoryId == categoryId) {
+    if (data.tribeId == tribeId) {
       recipesArray.push(data);
     }
   });
@@ -65,10 +65,10 @@ export function getRecipesByIngredient(ingredientId) {
   return recipesArray;
 }
 
-export function getNumberOfRecipes(categoryId) {
+export function getNumberOfRecipes(tribeId) {
   let count = 0;
   recipes.map(data => {
-    if (data.categoryId == categoryId) {
+    if (data.tribeId == tribeId) {
       count++;
     }
   });
@@ -105,10 +105,10 @@ export function getRecipesByIngredientName(ingredientName) {
   return uniqueArray;
 }
 
-export function getRecipesByCategoryName(categoryName) {
-  const nameUpper = categoryName.toUpperCase();
+export function getRecipesBytribeName(tribeName) {
+  const nameUpper = tribeName.toUpperCase();
   const recipesArray = [];
-  categories.map(data => {
+  tribes.map(data => {
     if (data.name.toUpperCase().includes(nameUpper)) {
       const recipes = getRecipes(data.id); // return a vector of recipes
       recipes.map(item => {
