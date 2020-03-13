@@ -17,7 +17,7 @@ export default function TribeActivity() {
 
   const navigation = useNavigation();
 
-  const item = navigation.setParams(tribe);
+  const item = navigation.dangerouslyGetParent().addListener(tribe);
   const recipesArray = getRecipes(item.id);
 
   onPressRecipe = item => {

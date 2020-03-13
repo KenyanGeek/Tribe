@@ -23,13 +23,40 @@ const Tab = createBottomTabNavigator();
 
 
 
-function FirstOnStack() {
+function Home() {
       return (
-        <Stack.Navigator>
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="TribeActivity" component={TribeActivity} />
-          <Stack.Screen name="Add" component={Add} />
-        </Stack.Navigator>
+    <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
+
+        if (route.name === 'Home') {
+          iconName = focused
+            ? 'ios-home'
+            : 'ios-home';
+        } else if (route.name === 'Mood') {
+          iconName = focused ? 'ios-happy' : 'ios-happy';
+        } else if (route.name === 'Add') {
+          iconName = focused ? 'ios-add-circle' : 'ios-add-circle';
+        } else if (route.name === 'Profile') {
+          iconName = focused ? 'md-person' : 'md-person';
+        }
+
+        // You can return any component that you like here!
+        return <Ionicons name={iconName} size={size} color={color} />;
+      },
+    })}
+    tabBarOptions={{
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    }}
+    
+>
+<Tab.Screen name="HomeScreen" component={HomeScreen} />
+<Tab.Screen name="Add" component={Add} />
+<Tab.Screen name="Profile" component={Profile} />
+
+</Tab.Navigator>
       );
     }
     
@@ -37,39 +64,10 @@ function FirstOnStack() {
       return (
             <NavigationContainer>
     
-      
-    <Tab.Navigator
-            screenOptions={({ route }) => ({
-              tabBarIcon: ({ focused, color, size }) => {
-                let iconName;
-
-                if (route.name === 'Home') {
-                  iconName = focused
-                    ? 'ios-home'
-                    : 'ios-home';
-                } else if (route.name === 'Mood') {
-                  iconName = focused ? 'ios-happy' : 'ios-happy';
-                } else if (route.name === 'Add') {
-                  iconName = focused ? 'ios-add-circle' : 'ios-add-circle';
-                } else if (route.name === 'Profile') {
-                  iconName = focused ? 'md-person' : 'md-person';
-                }
-
-                // You can return any component that you like here!
-                return <Ionicons name={iconName} size={size} color={color} />;
-              },
-            })}
-            tabBarOptions={{
-              activeTintColor: 'tomato',
-              inactiveTintColor: 'gray',
-            }}
-            
-    >
-        <Tab.Screen name="Home" component={FirstOnStack} />
-        <Tab.Screen name="Add" component={Add} />
-        <Tab.Screen name="Profile" component={Profile} />
-        
-</Tab.Navigator>
+<Stack.Navigator>
+          <Stack.Screen name="HomeScreen" component={Home} />
+          <Stack.Screen name="TribeActivity" component={TribeActivity} />
+        </Stack.Navigator>
   </NavigationContainer>
       );
     }
