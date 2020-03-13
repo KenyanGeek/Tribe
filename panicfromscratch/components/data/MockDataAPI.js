@@ -32,7 +32,7 @@ export function getIngredientUrl(ingredientID) {
   return url;
 }
 
-export function gettribeName(tribeId) {
+export function getTribeName(tribeId) {
   let name;
   tribes.map(data => {
     if (data.id == tribeId) {

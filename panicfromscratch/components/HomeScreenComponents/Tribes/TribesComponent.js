@@ -29,7 +29,7 @@ export default function TribesComponent() {
           <View style={styles.tribeItemContainer}>
             <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
             <Text style={styles.tribeName}>{item.name} Tribe </Text>
-            <Text style={styles.tribeInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
+            <Text style={styles.tribeInfo}>{getNumberOfRecipes(item.id)} Activities</Text>
           </View>
         </TouchableHighlight>
       );

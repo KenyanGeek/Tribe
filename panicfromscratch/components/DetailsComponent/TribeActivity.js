@@ -3,48 +3,49 @@ import {
   FlatList,
   Text,
   View,
-  Image,
-  TouchableHighlight
+  TouchableHighlight,
+  Image
 } from 'react-native';
-import styles from './styles';
-import { tribes } from '../data/dataArrays';
-import { getNumberOfRecipes } from '../data/MockDataAPI';
+import tribeactivitystyles from './tribeactivitystyles';
+import { getRecipes, getTribeName } from '../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
 
 
 
 
-export default function HomeScreen() {
+export default function TribeActivity() {
 
   const navigation = useNavigation();
 
-  onPressTribe = item => {
-    const title = item.name;
-    const tribe = item;
+  const item = navigation.setParams(tribe);
+  const recipesArray = getRecipes(item.id);
 
-    navigation.navigate("Add", { tribe, title });
+  onPressRecipe = item => {
+    navigation.navigate("Add", { item });
   };
-  
-  renderTribe = ({ item }) => (
-        <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPresstribe(item)}>
-          <View style={styles.tribesItemContainer}>
-            <Image style={styles.tribesPhoto} source={{ uri: item.photo_url }} /> 
-            <Text style={styles.tribesName}>{item.name} Tribe </Text>
-            <Text style={styles.tribesInfo}>{getNumberOfRecipes(item.id)} recipes</Text>
-          </View>
-        </TouchableHighlight>
-      );
 
-  
-  return (
-    <View>
+  renderRecipes = ({ item }) => (
+    <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressRecipe(item)}>
+      <View style={tribeactivitystyles.container}>
+        <Image style={tribeactivitystyles.photo} source={{ uri: item.photo_url }} />
+        <Text style={tribeactivitystyles.title}>{item.title}</Text>
+        <Text style={tribeactivitystyles.category}>{getTribeName(item.categoryId)}</Text>
+      </View>
+    </TouchableHighlight>
+  );
+
+   
+    return (
+      <View>
         <FlatList
-          data={tribes}
-          renderItem={this.renderTribe}
-          keyExtractor={item => `${item.id}`}
-          horizontal={true}
+          vertical
+          showsVerticalScrollIndicator={false}
+          numColumns={2}
+          data={recipesArray}
+          renderItem={this.renderRecipes}
+          keyExtractor={item => `${item.recipeId}`}
         />
       </View>
-  );
+    );
 
   }
