@@ -21,7 +21,7 @@ export default function TribesComponent() {
   onPressTribe = item => {
     const title = item.name;
     const tribe = item;
-    navigation.navigate("Add", { tribe, title });
+    navigation.navigate("TribeActivity", { tribe, title });
   };
   
   renderTribe = ({ item }) => (

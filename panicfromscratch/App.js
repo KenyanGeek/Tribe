@@ -13,7 +13,7 @@ import { Ionicons } from '@expo/vector-icons/';
 import HomeScreen from './screens/BottomTab/HomeScreen';
 import Add from './screens/BottomTab/Add';
 import Profile from './screens/BottomTab/Profile';
-import TribesActivity from './components/DetailsComponent/TribeActivity'
+import TribeActivity from './components/DetailsComponent/TribeActivity'
 
 
 
@@ -27,8 +27,8 @@ function FirstOnStack() {
       return (
         <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="TribeActivity" component={TribeActivity} />
           <Stack.Screen name="Add" component={Add} />
-          {/* <Stack.Screen name="TribesActivity" component={TribesActivity} /> */}
         </Stack.Navigator>
       );
     }
