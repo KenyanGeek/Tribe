@@ -52,7 +52,7 @@ function Home() {
     }}
     
 >
-<Tab.Screen name="HomeScreen" component={HomeScreen} />
+<Tab.Screen name="Home" component={HomeScreen} />
 <Tab.Screen name="Add" component={Add} />
 <Tab.Screen name="Profile" component={Profile} />
 
