@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    height: 215,
+    height: 170,
     width: 215,
     borderColor: '#dddddd',
     borderWidth: 1,
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 
   },
   tribePhoto: {
-    flex: 3,
+    flex: 4,
     width: '100%',
     height: 155,
     borderRadius: 20,

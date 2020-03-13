@@ -7,28 +7,22 @@ import {
   TouchableHighlight
 } from 'react-native';
 import styles from './styles';
-import { categories } from '../../data/dataArrays';
+import { tribes } from '../../data/dataArrays';
 import { getNumberOfRecipes } from '../../data/MockDataAPI';
 import { Button, Alert } from 'react-native';
 
 
 
-export default class RecommendedTribesComponent extends React.Component {
+export default function RecommendedTribesComponent () {
   
 
-  constructor(props) {
-    super(props);
-  }
 
-  _onPress() {
-    Alert.alert('Third Eye Activated!');
-  };
 
-  renderCategory = ({ item }) => (
-    <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressCategory(item)}>
-      <View style={styles.categoriesItemContainer}>
-        <Image style={styles.categoriesPhoto} source={{ uri: item.photo_url }} /> 
-        <Text style={styles.categoriesName}>{item.name} Tribe </Text>
+  renderTribe = ({ item }) => (
+    <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPresstribe(item)}>
+      <View style={styles.tribeItemContainer}>
+        <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
+        <Text style={styles.tribeName}>{item.name} Tribe </Text>
         <View style={styles.buttonContainer}>
           <Button
             onPress={this._onPressButton}
@@ -40,18 +34,18 @@ export default class RecommendedTribesComponent extends React.Component {
     </TouchableHighlight>
   );
 
-  render() {
+  
     return (
       <View>
         <FlatList
-          data={categories}
-          renderItem={this.renderCategory}
+          data={tribes}
+          renderItem={this.renderTribe}
           keyExtractor={item => `${item.id}`}
           horizontal={true}
         />
       </View>
     );
   }
-}
+
 
 
