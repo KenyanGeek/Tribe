@@ -38,7 +38,7 @@ export const activitys = [
   {
     activityId: 1220,
     tribeId: 5,
-    title: 'Ugali with Skuma',
+    title: 'Learning with Patel',
     photo_url: 'https://www.africanbites.com/wp-content/uploads/2015/01/IMG_9606.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
@@ -55,7 +55,7 @@ export const activitys = [
   {
     activityId: 122,
     tribeId: 3,
-    title: 'Oatmeal Cookies',
+    title: 'Yoga for Students of Color',
     photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
@@ -72,7 +72,7 @@ export const activitys = [
   {
     activityId: 3,
     tribeId: 4,
-    title: 'Triple Berry Smoothie',
+    title: 'Deep Meditation',
     photo_url:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
     photosArray: [
@@ -92,7 +92,7 @@ export const activitys = [
   {
     activityId: 2,
     tribeId: 3,
-    title: 'Vegan Cookies',
+    title: 'LGBTQ wellness',
     photo_url: 'https://www.texanerin.com/content/uploads/2018/06/no-bake-lactation-cookies-1-650x975.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2018/06/no-bake-lactation-cookies-1-650x975.jpg',
@@ -119,7 +119,7 @@ export const activitys = [
   {
     activityId: 3,
     tribeId: 3,
-    title: 'Pumpkin Spice Cookies',
+    title: 'Wellness Week',
     photo_url:
       'https://www.texanerin.com/content/uploads/2018/11/pumpkin-spice-cookies-4-650x975.jpg',
     photosArray: [
@@ -150,7 +150,7 @@ export const activitys = [
   {
     activityId: 1,
     tribeId: 3,
-    title: 'Brownies',
+    title: 'Water Fight',
     photo_url: 'https://www.texanerin.com/content/uploads/2018/01/coconut-flour-brownies-1-650x975.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2018/01/coconut-flour-brownies-1-650x975.jpg',
@@ -183,7 +183,7 @@ export const activitys = [
   {
     activityId: 4,
     tribeId: 1,
-    title: 'Perfect Fish Tacos',
+    title: 'Netflix and Chill Meetup',
     photo_url: 'https://hips.hearstapps.com/hmg-prod/images/190307-fish-tacos-112-1553283299.jpg',
     photosArray: [
       'http://d2814mmsvlryp1.cloudfront.net/wp-content/uploads/2014/04/WGC-Fish-Tacos-copy-2.jpg',
@@ -210,7 +210,7 @@ export const activitys = [
   {
     activityId: 5,
     tribeId: 1,
-    title: 'Chicken Fajitas',
+    title: 'Love is Blind',
     photo_url:
       'https://tmbidigitalassetsazure.blob.core.windows.net/secure/RMS/attachments/37/1200x1200/Flavorful-Chicken-Fajitas_EXPS_GHBZ18_12540_B08_15_8b.jpg',
     photosArray: [
