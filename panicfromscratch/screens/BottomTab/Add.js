@@ -7,9 +7,7 @@ import { View, Text, Button, StyleSheet, ScrollView, Image } from 'react-native'
 
 export default function Add ({navigation}) {
   return (
-    // Try removing the `flex: 1` on the parent View.
-    // The parent will not have dimensions, so the children can't expand.
-    // What if you add `height: 300` instead of `flex: 1`?
+    
 <View style={styles.container}>
     <ScrollView
       style={styles.container}

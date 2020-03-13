@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  FlatList,
-  Text,
-  View,
-  TouchableHighlight,
-  Image
-} from 'react-native';
+import {FlatList,Text,View,TouchableHighlight,Image} from 'react-native';
 import tribeactivitystyles from './tribeactivitystyles';
 import { getRecipes, getTribeName } from '../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
@@ -13,12 +7,11 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-export default function TribeActivity() {
+export default function TribeActivity({ route, navigation }) {
 
-  const navigation = useNavigation();
-
-  const item = navigation.setParams(tribe);
-  const recipesArray = getRecipes(item.id);
+ const { tribedata } = route.params;
+   
+  const recipesArray = getRecipes(tribedata.id);
 
   onPressRecipe = item => {
     navigation.navigate("Add", { item });
@@ -31,11 +24,14 @@ export default function TribeActivity() {
         <Text style={tribeactivitystyles.title}>{item.title}</Text>
         <Text style={tribeactivitystyles.category}>{getTribeName(item.categoryId)}</Text>
       </View>
+      
     </TouchableHighlight>
+
+    
   );
 
    
-    return (
+   return (
       <View>
         <FlatList
           vertical
@@ -46,6 +42,6 @@ export default function TribeActivity() {
           keyExtractor={item => `${item.recipeId}`}
         />
       </View>
-    );
+    ); 
 
   }

@@ -65,7 +65,7 @@ export function getRecipesByIngredient(ingredientId) {
   return recipesArray;
 }
 
-export function getNumberOfRecipes(tribeId) {
+export function getNumberOfActivities(tribeId) {
   let count = 0;
   recipes.map(data => {
     if (data.tribeId == tribeId) {

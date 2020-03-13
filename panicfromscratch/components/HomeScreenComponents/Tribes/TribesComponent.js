@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 import { tribes } from '../../data/dataArrays';
-import { getNumberOfRecipes } from '../../data/MockDataAPI';
+import { getNumberOfActivities } from '../../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -19,9 +19,8 @@ export default function TribesComponent() {
   const navigation = useNavigation();
 
   onPressTribe = item => {
-    const title = item.name;
-    const tribe = item;
-    navigation.navigate("TribeActivity", { tribe, title });
+    const tribedata = item;
+    navigation.navigate("TribeActivity", {tribedata});
   };
   
   renderTribe = ({ item }) => (
@@ -29,7 +28,7 @@ export default function TribesComponent() {
           <View style={styles.tribeItemContainer}>
             <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
             <Text style={styles.tribeName}>{item.name} Tribe </Text>
-            <Text style={styles.tribeInfo}>{getNumberOfRecipes(item.id)} Activities</Text>
+            <Text style={styles.tribeInfo}>{getNumberOfActivities(item.id)} Activities ongoing for {item.name} </Text>
           </View>
         </TouchableHighlight>
       );

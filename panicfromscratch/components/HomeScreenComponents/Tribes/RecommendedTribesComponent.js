@@ -25,7 +25,7 @@ export default function RecommendedTribesComponent () {
         <Text style={styles.tribeName}>{item.name} Tribe </Text>
         <View style={styles.buttonContainer}>
           <Button
-            onPress={this._onPressButton}
+          
             title="Press Me"
             color="#841584"
           />

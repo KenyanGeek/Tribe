@@ -67,6 +67,8 @@ function Home() {
 <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={Home} />
           <Stack.Screen name="TribeActivity" component={TribeActivity} />
+          <Stack.Screen name="Add" component={Add} />
+
         </Stack.Navigator>
   </NavigationContainer>
       );
