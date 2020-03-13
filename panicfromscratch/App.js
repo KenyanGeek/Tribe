@@ -23,11 +23,12 @@ const Tab = createBottomTabNavigator();
 
 
 
-    function FirstOnStack() {
+function FirstOnStack() {
       return (
         <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
-          <Stack.Screen name="TribesActivity" component={TribesActivity} />
+          <Stack.Screen name="Add" component={Add} />
+          {/* <Stack.Screen name="TribesActivity" component={TribesActivity} /> */}
         </Stack.Navigator>
       );
     }
