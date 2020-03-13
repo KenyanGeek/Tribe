@@ -9,9 +9,9 @@ import DiscoverNewThings from '../../components/HomeScreenComponents/DiscoverNew
 
 
 
-export default class HomeScreen extends Component {
+export default function HomeScreen() {
 
-  render() {
+
 
 
   return (
@@ -79,7 +79,7 @@ export default class HomeScreen extends Component {
           </View>      
       </ScrollView>
       </SafeAreaView>     
-     )}};
+     )};
  
      const styles = StyleSheet.create({
       
