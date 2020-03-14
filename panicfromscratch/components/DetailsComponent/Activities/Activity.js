@@ -3,8 +3,8 @@ import {FlatList,ScrollView,Text,View,TouchableOpacity,Image,Dimensions,Touchabl
 import styles from './styles';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getTribeName, getTribeById } from '../../data/MockDataAPI';
-import BackButton from '../../components/BackButton/BackButton';
-import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
+import BackButton from '../../BackButton/BackButton';
+import ViewIngredientsButton from '../../ViewIngredientsButton/ViewIngredientsButton';
 
 const { width: viewportWidth } = Dimensions.get('window');
 
@@ -96,7 +96,7 @@ export default class RecipeScreen extends React.Component {
           </View>
 
           <View style={styles.infoContainer}>
-            <Image style={styles.infoPhoto} source={require('../../../assets/icons/time.png')} />
+            <Image style={styles.infoPhoto} source={require('../../../assets/time.png')} />
             <Text style={styles.infoRecipe}>{item.time} minutes </Text>
           </View>
 
