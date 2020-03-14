@@ -13,7 +13,7 @@ export default function TribeActivity({ route, navigation }) {
   const activitysArray = getActivitys(tribedata.id);
 
   onPressActivity = item => {
-    navigation.navigate("Activity", { tribesdata });
+    navigation.navigate("Activity", { item });
   };
 
   renderActivitys = ({ item }) => (
