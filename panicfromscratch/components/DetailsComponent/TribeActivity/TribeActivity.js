@@ -11,6 +11,8 @@ export default function TribeActivity({ route, navigation }) {
  const { tribedata } = route.params;
    
   const activitysArray = getActivitys(tribedata.id);
+  const tribesArray = getTribeName(tribedata.id);
+
 
   onPressActivity = item => {
     navigation.navigate("Activity", { item });
@@ -39,7 +41,18 @@ export default function TribeActivity({ route, navigation }) {
   
 
 );
-   
+
+renderHelpResources = ({ item }) => ( 
+  <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressActivity(item)}>
+    <View>
+    <Text style={tribeactivitystyles.title}>{item.title}</Text>
+    <Text style={tribeactivitystyles.category}>{getTribeName(item.categoryId)}</Text>
+    </View>
+</TouchableHighlight>      
+                    
+
+
+);
    return (
     <SafeAreaView style={{flex:1}}>
 
@@ -74,7 +87,24 @@ export default function TribeActivity({ route, navigation }) {
           vertical
         />
       </ScrollView>
+      <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
+                        Services
+                      </Text>
+                      <Text style={{fontWeight: '100', marginTop: 5, paddingHorizontal: 20, paddingBottom: 20}}>
+                        Services in your tribe
+                      </Text>
+      <ScrollView>
+
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={activitysArray}
+          renderItem={this.renderHelpResources}
+          keyExtractor={item => `${item.ActivityId}`}
+          vertical
+        />
+      </ScrollView>
     </View>
+
     </SafeAreaView>
 
     ); 
