@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList,Text,View,TouchableHighlight,Image} from 'react-native';
+import {FlatList,Text,View,TouchableHighlight,Image,SafeAreaView, ScrollView} from 'react-native';
 import tribeactivitystyles from './tribeactivitystyles';
 import { getActivitys, getTribeName } from '../../data/MockDataAPI';
 
@@ -17,6 +17,9 @@ export default function TribeActivity({ route, navigation }) {
   };
 
   renderActivitys = ({ item }) => (
+    <SafeAreaView style={{flex:1}}>
+
+    <ScrollView  >
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressActivity(item)}>
       <View style={tribeactivitystyles.container}>
         <Image style={tribeactivitystyles.photo} source={{ uri: item.photo_url }} />
@@ -25,8 +28,8 @@ export default function TribeActivity({ route, navigation }) {
       </View>
       
     </TouchableHighlight>
-
-    
+    </ScrollView>
+    </SafeAreaView>
   );
 
    
