@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList,ScrollView,Text,View,TouchableOpacity,Image,Dimensions,TouchableHighlight} from 'react-native';
 import styles from './styles';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
+import { getIngredientName, getTribeName, getTribeById } from '../../data/MockDataAPI';
 import BackButton from '../../components/BackButton/BackButton';
 import ViewIngredientsButton from '../../components/ViewIngredientsButton/ViewIngredientsButton';
 
@@ -47,8 +47,8 @@ export default class RecipeScreen extends React.Component {
     const { activeSlide } = this.state;
     const { navigation } = this.props;
     const item = navigation.getParam('item');
-    const category = getCategoryById(item.categoryId);
-    const title = getCategoryName(category.id);
+    const tribe = getTribeById(item.tribeId);
+    const title = getTribeName(tribe.id);
 
     return (
       <ScrollView style={styles.container}>
@@ -89,9 +89,9 @@ export default class RecipeScreen extends React.Component {
           <Text style={styles.infoRecipeName}>{item.title}</Text>
           <View style={styles.infoContainer}>
             <TouchableHighlight
-              onPress={() => navigation.navigate('RecipesList', { category, title })}
+              onPress={() => navigation.navigate('RecipesList', { tribe, title })}
             >
-              <Text style={styles.category}>{getCategoryName(item.categoryId).toUpperCase()}</Text>
+              <Text style={styles.tribe}>{getTribeName(item.tribeId).toUpperCase()}</Text>
             </TouchableHighlight>
           </View>
 
