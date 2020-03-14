@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  FlatList,
-  ScrollView,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  TouchableHighlight
-} from 'react-native';
+import {FlatList,ScrollView,Text,View,TouchableOpacity,Image,Dimensions,TouchableHighlight} from 'react-native';
 import styles from './styles';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { getIngredientName, getCategoryName, getCategoryById } from '../../data/MockDataAPI';
