@@ -9,11 +9,15 @@ import { Ionicons } from '@expo/vector-icons/';
 
 
 
-
+// Stack route screens
 import HomeScreen from './screens/BottomTab/HomeScreen';
+import TribeActivity from './components/DetailsComponent/TribeActivity/TribeActivity'
+import Activity from './components/DetailsComponent/Activities/Activity'
+
+// Tab screens
 import Add from './screens/BottomTab/Add';
 import Profile from './screens/BottomTab/Profile';
-import TribeActivity from './components/DetailsComponent/TribeActivity/TribeActivity'
+
 
 
 
@@ -28,7 +32,8 @@ function FirstOnStack() {
         <Stack.Navigator>
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="TribeActivity" component={TribeActivity} />
-          <Stack.Screen name="Add" component={Add} />
+          <Stack.Screen name="Activity" component={Activity} />
+
         </Stack.Navigator>
       );
     }
