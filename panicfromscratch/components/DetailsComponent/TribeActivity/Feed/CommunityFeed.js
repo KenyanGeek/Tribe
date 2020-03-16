@@ -1,66 +1,86 @@
 import React from 'react';
-import {FlatList,Text,View,TouchableHighlight,Image,SafeAreaView, ScrollView} from 'react-native';
+import {
+  FlatList,
+
+  View,
+  Image,
+  TouchableHighlight
+} from 'react-native';
+import styles from '../../../HomeScreenComponents/Tribes/styles';
 import { tribes } from '../../../data/dataArrays';
-import tribeactivitystyles from '../tribeactivitystyles';
-import { getActivitys, getTribeName } from '../../../data/MockDataAPI';
+import { getNumberOfActivities } from '../../../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
 
 
 
-export default function CommunityFeed() {
+export default function TribesComponent() {
 
-const navigation = useNavigation();
+  const navigation = useNavigation();
 
-const tribedata = tribes
-const activitysArray = getActivitys(tribedata.id);
-
-  onPressActivity = item => {
-    navigation.navigate("Activity", { item });
+  onPressTribe = item => {
+    const tribedata = item;
+    navigation.navigate("TribeActivity", {tribedata});
   };
+  
+  renderTribe = ({ item }) => (
+        // <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressTribe(item)}>
+        //   <View style={styles.tribeItemContainer}>
+        //     <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
+        //     <Text style={styles.tribeName}>{item.name} Tribe </Text>
+        //     <Text style={styles.tribeInfo}>{getNumberOfActivities(item.id)} Activities ongoing for {item.name} </Text>
+        //   </View>
+        // </TouchableHighlight>
+        <Container>
+        <Header />
+        <Content>
+          <Card>
+            <CardItem>
+              <Left>
+                <Thumbnail source={{uri: 'Image URL'}} />
+                <Body>
+                  <Text>{item.name}</Text>
+                  <Text note>{item.name}</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{ uri: item.photo_url }} style={{height: 200, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
+      );
 
-  renderActivitys = ({ item }) => (
-    <SafeAreaView style={{flex:1}}>
 
-    <ScrollView  >
-
-
-        <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
-
-          
-      <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressActivity(item)}>
-      <View style={tribeactivitystyles.container}>
-        <Image style={tribeactivitystyles.photo} source={{ uri: item.photo_url }} />
-        <Text style={tribeactivitystyles.title}>{item.title}</Text>
-        <Text style={tribeactivitystyles.category}>{getTribeName(item.categoryId)}</Text>
-      </View>
       
-    </TouchableHighlight>      
-                        
-          </View> 
-    
-    </ScrollView>
-    </SafeAreaView>
-  );
-
-   
-   return (
-    <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
-         <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
-                        Your People Talk are Talking
-                      </Text>
-                      <Text style={{fontWeight: '100', marginTop: 5, paddingHorizontal: 20, paddingBottom: 20}}>
-                        Meet your People
-                      </Text>
-          
+  
+  return (
+    <View>
         <FlatList
-          showsVerticalScrollIndicator={false}
-          data={activitysArray}
-          renderItem={this.renderActivitys}
-          keyExtractor={item => `${item.ActivityId}`}
-          horizontal={true}
+          data={tribes}
+          renderItem={this.renderTribe}
+          keyExtractor={item => `${item.id}`}
         />
       </View>
-    ); 
+  );
 
   }
