@@ -33,7 +33,7 @@ export default function TribesComponent() {
         //   </View>
         // </TouchableHighlight>
         <Container>
-        <Header />
+        
         <Content>
           <Card>
             <CardItem>
