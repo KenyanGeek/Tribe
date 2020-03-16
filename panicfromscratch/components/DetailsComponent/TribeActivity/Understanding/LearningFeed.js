@@ -14,7 +14,7 @@ import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Ic
 
 
 
-export default function CommunityFeed() {
+export default function LearningFeed() {
 
   const navigation = useNavigation();
 
