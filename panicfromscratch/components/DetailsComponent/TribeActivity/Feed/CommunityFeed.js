@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import styles from '../../../HomeScreenComponents/Tribes/styles';
 import { tribes } from '../../../data/dataArrays';
-import { getNumberOfActivities } from '../../../data/MockDataAPI';
 import { useNavigation } from '@react-navigation/native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
@@ -25,20 +24,13 @@ export default function TribesComponent() {
   };
   
   renderTribe = ({ item }) => (
-        // <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressTribe(item)}>
-        //   <View style={styles.tribeItemContainer}>
-        //     <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
-        //     <Text style={styles.tribeName}>{item.name} Tribe </Text>
-        //     <Text style={styles.tribeInfo}>{getNumberOfActivities(item.id)} Activities ongoing for {item.name} </Text>
-        //   </View>
-        // </TouchableHighlight>
-        <Container>
-        
+    <TouchableHighlight style={{ padding: 10, flex: 0.2}}>
+
+        <View >
         <Content>
           <Card>
             <CardItem>
               <Left>
-                <Thumbnail source={{uri: 'Image URL'}} />
                 <Body>
                   <Text>{item.name}</Text>
                   <Text note>{item.name}</Text>
@@ -46,9 +38,9 @@ export default function TribesComponent() {
               </Left>
             </CardItem>
             <CardItem cardBody>
-              <Image source={{ uri: item.photo_url }} style={{height: 200, width: null, flex: 1}}/>
+              <Image source={{ uri: item.photo_url }} style={{height: 150, width: null}}/>
             </CardItem>
-            <CardItem>
+            <CardItem >
               <Left>
                 <Button transparent>
                   <Icon active name="thumbs-up" />
@@ -67,7 +59,9 @@ export default function TribesComponent() {
             </CardItem>
           </Card>
         </Content>
-      </Container>
+      </View>
+      </TouchableHighlight>
+
       );
 
 
@@ -79,6 +73,7 @@ export default function TribesComponent() {
           data={tribes}
           renderItem={this.renderTribe}
           keyExtractor={item => `${item.id}`}
+          contentContainerStyle={{paddingBottom:10}}
         />
       </View>
   );
