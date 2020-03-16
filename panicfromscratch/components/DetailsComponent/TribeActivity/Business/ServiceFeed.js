@@ -37,9 +37,6 @@ export default function ServiceFeed() {
                 </Body>
               </Left>
             </CardItem>
-            <CardItem cardBody>
-              <Image source={{ uri: item.photo_url }} style={{height: 150, width: null}}/>
-            </CardItem>
             <CardItem >
               <Left>
                 <Button transparent>
