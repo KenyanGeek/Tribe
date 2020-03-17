@@ -19,12 +19,12 @@ export default function TribesComponent() {
   const navigation = useNavigation();
 
   onPressTribe = item => {
-    const tribedata = item;
-    navigation.navigate("TribeActivity", {tribedata});
+    
+    navigation.navigate("TribeActivity");
   };
   
   renderTribe = ({ item }) => (
-        <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressTribe(item)}>
+        <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressTribe()}>
           <View style={styles.tribeItemContainer}>
             <Image style={styles.tribePhoto} source={{ uri: item.photo_url }} /> 
             <Text style={styles.tribeName}>{item.name} Tribe </Text>
