@@ -33,8 +33,8 @@ export default function HomeScreen() {
                         
           </View> 
        
-       
-          <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
+       {/* Will unleash all this goodness in other versions */}
+          {/* <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
                       <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
                        Recommended Tribes
                       </Text>
@@ -61,7 +61,7 @@ export default function HomeScreen() {
                         <DiscoverNewThings />
                       </ScrollView>
                           </View>                          
-          </View>      
+          </View>       */}
       </ScrollView>
       </SafeAreaView>     
      )};

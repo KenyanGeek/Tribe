@@ -40,7 +40,6 @@ export default function TribesComponent() {
           data={tribes}
           renderItem={this.renderTribe}
           keyExtractor={item => `${item.id}`}
-          horizontal={true}
         />
       </View>
   );
