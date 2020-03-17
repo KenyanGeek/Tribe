@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
   },
   tribePhoto: {
-    flex: 4,
+    flex: 6,
     width: '100%',
     height: 155,
     borderRadius: 20,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   tribeName: {
     flex: 1,
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#333333',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   tribeInfo: {
     flex: 1,
     marginTop: 3,
-    marginBottom: 5
+    marginBottom: 2
   },
   buttonContainer: {
     margin: 20
