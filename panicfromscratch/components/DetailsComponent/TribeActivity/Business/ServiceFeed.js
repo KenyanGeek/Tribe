@@ -39,20 +39,11 @@ export default function ServiceFeed() {
             </CardItem>
             <CardItem >
               <Left>
-                <Button transparent>
-                  <Icon active name="thumbs-up" />
-                  <Text>12 Likes</Text>
-                </Button>
+              <Button>
+            <Text>Click Me!</Text>
+          </Button>
               </Left>
-              <Body>
-                <Button transparent>
-                  <Icon active name="chatbubbles" />
-                  <Text>4 Comments</Text>
-                </Button>
-              </Body>
-              <Right>
-                <Text>11h ago</Text>
-              </Right>
+              
             </CardItem>
           </Card>
         </Content>
