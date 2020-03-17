@@ -16,13 +16,9 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={{flex:1}}>
-
+         
       <ScrollView  style={styles.scrollView} >
-        <View style={{marginTop:10, paddingBottom: 10, backgroundColor: 'white'}}>
-        <Text style={{marginTop:10, fontSize: 48, fontWeight: '700', paddingHorizontal: 20}}>
-                        Tribe 
-                          </Text>
-        </View> 
+     
 
         <View style={{marginTop:10, paddingBottom: 20, backgroundColor: 'white'}}>
                       <Text style={{marginTop:30, fontSize: 24, fontWeight: '700', paddingHorizontal: 20}}>
