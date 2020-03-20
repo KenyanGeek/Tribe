@@ -1,6 +1,7 @@
 
-
 import React, { Component } from 'react';
+import { SafeAreaView } from 'react-native';
+
 import { Container, Header, Content, Tab, Tabs } from 'native-base';
 import Profile from '../BottomTab/Profile';
 import CommunityFeed from '../../components/DetailsComponent/TribeActivity/Feed/CommunityFeed'
@@ -14,6 +15,8 @@ const TopTab = createMaterialTopTabNavigator();
 
 export default function Add() {
   return (
+    <SafeAreaView style={{ flex: 1 }}>
+
     <TopTab.Navigator
       initialRouteName="CommunityFeed"
       tabBarOptions={{
@@ -25,18 +28,20 @@ export default function Add() {
       <TopTab.Screen
         name="CommunityFeed"
         component={CommunityFeed}
-        options={{ tabBarLabel: 'Home' }}
+        options={{ tabBarLabel: 'Community' }}
       />
       <TopTab.Screen
         name="LearningFeed"
         component={LearningFeed}
-        options={{ tabBarLabel: 'Updates' }}
+        options={{ tabBarLabel: 'Learning' }}
       />
       <TopTab.Screen
         name="ServiceFeed"
         component={ServiceFeed}
-        options={{ tabBarLabel: 'Profile' }}
+        options={{ tabBarLabel: 'Services' }}
       />
     </TopTab.Navigator>
+    </SafeAreaView>
+
   );
 }
